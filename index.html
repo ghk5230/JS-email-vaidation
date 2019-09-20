@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+	</script>
+	<title>sample</title>
+</head>
+<body>
+	<p>Email validation</p>
+	<form name="form1">
+
+	<input type="text" id="fname" name="text1"><p><input type="submit" value="OK" onclick="ValidateEmail(document.form1.text1)">
+</body>
+</html>
